@@ -214,14 +214,14 @@ while kurikaeshi:
     ※ 私が注意！spriteにはプレイヤーのインスタンスを渡すこと。グループではない。
     ※ 敵だけを管理する箱がないと
     """
-    pygame.sprite.spritecollide()
-
+    pygame.sprite.spritecollide(player,teki_hako,dokill=True)
+    # でけた？おけ？
     # 背景を真っ黒に塗りつぶす
     screen.fill((0, 0, 0))
     # 星を描画する（例えば、100個の星）
     all_sprites.update()
     all_sprites.draw(screen)
     teki_hako.update()
-    teki_hako.draw()
+    teki_hako.draw(screen)
     pygame.display.flip()
 pygame.quit()
